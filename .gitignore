@@ -1,0 +1,19 @@
+# Build artifacts
+build/
+build_vs/
+backend/out/
+
+# IDE files
+.idea/
+.vs/
+*.sln
+*.vcxproj*
+
+# External dependencies/tools
+vcpkg/
+ninja/
+
+# vcpkg-specific ignore
+vcpkg-manifest-install.log
+CMakeCache.txt
+CMakeFiles/
