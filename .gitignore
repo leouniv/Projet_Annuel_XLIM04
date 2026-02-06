@@ -9,6 +9,10 @@ backend/out/
 *.sln
 *.vcxproj*
 
+# Build/run scripts
+build_and_run.bat
+temp_build.bat
+
 # External dependencies/tools
 vcpkg/
 ninja/
