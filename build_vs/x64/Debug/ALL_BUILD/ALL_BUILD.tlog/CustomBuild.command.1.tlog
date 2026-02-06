@@ -1,0 +1,10 @@
+^D:\MES DOCUMENTS\DEV PROJECTS\ACADEMIQUE\PROJET_ANNUEL\BACKEND\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend" "-BD:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs" --check-stamp-file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

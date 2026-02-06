@@ -1,0 +1,114 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 20d425d5db27a6658727e657f75a3704f9fad176e6f4ac0babb75713f67a7b44
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 495c3a665c6d9993fa0d6d494088ba67fbc9c245f9c7dda69fa8db5da20a325f
+Status: install ok installed
+
+Package: glfw3
+Version: 3.4
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 172975ba96cca2933fe6424c06a9fd9ab32bada90d35505aaafa9b8bc3f483ab
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Status: install ok installed
+
+Package: glm
+Version: 1.0.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 74e1efc752a7b5c519fbbc82479f93a94d864f2b6f19d0a5210201b6272200c7
+Description: OpenGL Mathematics (GLM)
+Status: install ok installed
+
+Package: usrsctp
+Version: 0.9.5.0
+Port-Version: 4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 85940babd2056130f30e3b714542459738081d0e2e309b35b3e6d5667f72bb43
+Description: A userland SCTP stack supporting FreeBSD, Linux, Mac OS X and Windows.
+Status: install ok installed
+
+Package: plog
+Version: 1.1.11
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b05f5e473f5430f1f0b866611afd51b0b1a0011c5e54dc72e1ea98eb40f14847
+Description: Portable, simple and extensible C++ logging library.
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2025-05-29
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8ab2b02f623ca927a93797491d85666268d69d02c999484553e940f5f4398e97
+Status: install ok installed
+
+Package: openssl
+Version: 3.6.1
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: dcc939d70680b49e47cf13662d8873109890540ef82922602d90ee416d87217e
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.12.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fe399a4064d740957def893edfc67133175c58f49088fc4e03ea88ad78c4d883
+Description: JSON for Modern C++
+Status: install ok installed
+
+Package: libjuice
+Version: 1.7.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ff5387e9f5b7ec6907599ccfa67d736b0c8c8cee45dba8273dfa83fbdff3a22d
+Description: The library is a simplified implementation of the Interactive Connectivity Establishment (ICE) protocol in C for POSIX platforms (including Linux and Apple macOS) and Microsoft Windows.
+Status: install ok installed
+
+Package: libdatachannel
+Version: 0.24.1
+Depends: libjuice, nlohmann-json, openssl, plog, usrsctp, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5e44460e0744c52b3645afbd0f0b19051ea763a0b44a713372aeae261d43d1bd
+Description: libdatachannel is a standalone implementation of WebRTC Data Channels, WebRTC Media Transport, and WebSockets in C++17 with C bindings for POSIX platforms (including GNU/Linux, Android, and Apple macOS) and Microsoft Windows.
+Default-Features: ws
+Status: install ok installed
+
+Package: libdatachannel
+Feature: ws
+Architecture: x64-windows
+Multi-Arch: same
+Description: Web Socket support
+Status: install ok installed
+
+Package: libjpeg-turbo
+Version: 3.1.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4d967f94f9ee297c635b031831971dd5cd4a523bc3c7ce82a88261449d475b62
+Description: libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.
+Status: purge ok not-installed
+

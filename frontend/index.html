@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Gaming 3D</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #1a1a1a; 
+            color: #eee; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+        }
+        h1 { margin-bottom: 20px; font-weight: 300; }
+        
+        #game-container {
+            position: relative;
+            padding: 10px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+            /* Zone d'affichage large en 16:9 (approx 1080p reduit) */
+            width: 1280px;
+            height: 720px;
+        }
+        
+        canvas { 
+            background: #000; 
+            border-radius: 4px;
+            /* L'image est retournée verticalement car OpenGL part du bas */
+            transform: scaleY(-1); 
+            display: block;
+            /* On etire le rendu 320x180 pour remplir la zone d'affichage */
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #45a049; }
+        button:disabled { background-color: #555; cursor: default; }
+
+        #status { margin-top: 10px; color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <h1>Démo Cloud Gaming - Cube 3D</h1>
+    
+    <div id="game-container">
+        <!-- Resolution logique 320x180 (cote serveur), etirée visuellement en grand -->
+        <canvas id="renderCanvas" width="384" height="216"></canvas>
+    </div>
+
+    <div id="status">En attente de connexion...</div>
+    <button id="btn-connect" onclick="startConnection()">Démarrer la Session</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

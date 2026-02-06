@@ -1,0 +1,3 @@
+D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/MonServeur.dir
+D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/ALL_BUILD.dir
+D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/ZERO_CHECK.dir

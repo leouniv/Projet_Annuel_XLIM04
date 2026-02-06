@@ -1,0 +1,10 @@
+{
+  "name": "rendu3d-server",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "libdatachannel",
+    "glfw3",
+    "glm",
+    "nlohmann-json"
+  ]
+}

@@ -1,0 +1,19 @@
+Detecting compiler hash for triplet x64-windows...
+error: while detecting compiler information:
+The log file content at "D:\Mes documents\Dev Projects\Acad├®mique\Projet_Annuel\vcpkg\buildtrees\detect_compiler\stdout-x64-windows.log" is:
+CMake Error at scripts/cmake/vcpkg_execute_in_download_mode.cmake:29 (execute_process):
+  execute_process failed command indexes:
+
+    1: "Abnormal exit with child return code: no such file or directory"
+
+Call Stack (most recent call first):
+  scripts/cmake/vcpkg_execute_in_download_mode.cmake:29 (cmake_language)
+  scripts/cmake/vcpkg_find_acquire_program.cmake:110 (vcpkg_execute_in_download_mode)
+  scripts/cmake/vcpkg_find_acquire_program(NINJA).cmake:1 (z_use_vcpkg_fetch)
+  scripts/cmake/vcpkg_find_acquire_program.cmake:144 (include)
+  scripts/cmake/vcpkg_configure_cmake.cmake:150 (vcpkg_find_acquire_program)
+  scripts/detect_compiler/portfile.cmake:18 (vcpkg_configure_cmake)
+  scripts/ports.cmake:206 (include)
+
+
+error: vcpkg was unable to detect the active compiler's information. See above for the CMake failure output.

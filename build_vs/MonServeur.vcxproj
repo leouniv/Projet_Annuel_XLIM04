@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6FB91F6C-9780-3BF6-86B8-58FC79BB02FD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>MonServeur</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MonServeur.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MonServeur</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MonServeur.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MonServeur</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">MonServeur.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">MonServeur</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">MonServeur.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">MonServeur</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Debug/MonServeur.exe" -installedDir "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/debug/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\debug\lib\datachannel.lib;vcpkg_installed\x64-windows\debug\lib\glfw3dll.lib;vcpkg_installed\x64-windows\debug\lib\glm.lib;opengl32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Debug/MonServeur.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Debug/MonServeur.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Release/MonServeur.exe" -installedDir "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\datachannel.lib;vcpkg_installed\x64-windows\lib\glfw3dll.lib;vcpkg_installed\x64-windows\lib\glm.lib;opengl32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Release/MonServeur.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/Release/MonServeur.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/MinSizeRel/MonServeur.exe" -installedDir "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\datachannel.lib;vcpkg_installed\x64-windows\lib\glfw3dll.lib;vcpkg_installed\x64-windows\lib\glm.lib;opengl32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/MinSizeRel/MonServeur.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/MinSizeRel/MonServeur.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RTC_ENABLE_WEBSOCKET=1;RTC_ENABLE_MEDIA=0;GLFW_DLL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/RelWithDebInfo/MonServeur.exe" -installedDir "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/vcpkg_installed/x64-windows/bin" -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>vcpkg_installed\x64-windows\lib\datachannel.lib;vcpkg_installed\x64-windows\lib\glfw3dll.lib;vcpkg_installed\x64-windows\lib\glm.lib;opengl32.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/RelWithDebInfo/MonServeur.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/RelWithDebInfo/MonServeur.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend" "-BD:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs" --check-stamp-file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenGL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenSSL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\vcpkg.json;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCXXCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeRCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeSystem.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend" "-BD:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs" --check-stamp-file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenGL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenSSL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\vcpkg.json;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCXXCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeRCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeSystem.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend" "-BD:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs" --check-stamp-file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenGL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenSSL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\vcpkg.json;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCXXCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeRCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeSystem.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Mes documents/Dev Projects/Academique/Projet_Annuel/backend" "-BD:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs" --check-stamp-file "D:/Mes documents/Dev Projects/Academique/Projet_Annuel/build_vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenGL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindOpenSSL.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.1\Modules\SelectLibraryConfigurations.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\vcpkg.json;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeCXXCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeRCCompiler.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\4.1.1-msvc1\CMakeSystem.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3ConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glfw3\glfw3Targets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\glm\glmConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libdatachannel\LibDataChannelTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\libjuice\LibJuiceTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_jsonTargets.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfig.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\plog\plogConfigVersion.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-debug.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config-release.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\unofficial-usrsctp\unofficial-usrsctp-config.cmake;D:\Mes documents\Dev Projects\Academique\Projet_Annuel\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\main.cpp" />
+    <ClCompile Include="D:\Mes documents\Dev Projects\Academique\Projet_Annuel\backend\Renderer.cpp" />
+    <Natvis Include="D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\vcpkg_installed\x64-windows\share\nlohmann_json\nlohmann_json.natvis">
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Mes documents\Dev Projects\Academique\Projet_Annuel\build_vs\ZERO_CHECK.vcxproj">
+      <Project>{19D51EB4-2F46-3C1B-AB64-854B6DC66AB3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
