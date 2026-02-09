@@ -2,12 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\build",
-    "\\backend\\build\\CMakeFiles",
-    "\\backend\\build\\CMakeFiles\\4.1.1-msvc1",
-    "\\build",
     "\\frontend"
   ],
-  "SelectedNode": "\\frontend\\script.js",
   "PreviewInSolutionExplorer": false
 }
