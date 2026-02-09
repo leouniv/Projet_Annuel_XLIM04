@@ -8,9 +8,10 @@ backend/out/
 .vs/
 *.sln
 *.vcxproj*
+.vs/**/*.VC.db
+.vs/**/*.db
 
 # Build/run scripts
-build_and_run.bat
 temp_build.bat
 
 # External dependencies/tools
