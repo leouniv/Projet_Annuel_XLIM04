@@ -3,7 +3,6 @@ let pc = null;
 let ws = null;
 let isDragging = false;
 
-// UI Helpers
 const statusDiv = document.getElementById('status');
 const btnConnect = document.getElementById('btn-connect');
 
@@ -38,14 +37,16 @@ function startConnection() {
 function createPeerConnection() {
     pc = new RTCPeerConnection(rtcConfig);
     
-    window.dataChannel = pc.createDataChannel("control");
+    window.dataChannel = pc.createDataChannel("control", {
+        ordered: true,
+        maxRetransmits: 0
+    });
     setupDataChannel(window.dataChannel);
 
     pc.onicecandidate = (e) => {
         if (e.candidate) ws.send(JSON.stringify({ type: "candidate", candidate: e.candidate }));
     };
 
-    // Obligatoire pour initier la négociation
     pc.addTransceiver('video', { direction: 'recvonly' });
 
     pc.createOffer().then(offer => {
@@ -55,17 +56,58 @@ function createPeerConnection() {
 }
 
 function setupDataChannel(dc) {
+    dc.binaryType = "arraybuffer";
+    let decoding = false;
+    let frameCount = 0;
+    let totalBytes = 0;
+    let lastKpiUpdate = performance.now();
+    let currentPing = 0;
+    let lastFrameSize = 0;
+
     dc.onopen = () => {
         setStatus("✅ Session Active. Touchez le cube pour tourner.");
-        btnConnect.style.display = 'none'; // On cache le bouton
+        btnConnect.style.display = 'none';
         setupMouseInteraction();
+
+        // Mise a jour KPI chaque seconde
+        setInterval(() => {
+            const now = performance.now();
+            const elapsed = (now - lastKpiUpdate) / 1000;
+            const fps = Math.round(frameCount / elapsed);
+            const bitrate = ((totalBytes * 8) / elapsed / 1000).toFixed(1);
+            const frameSizeKo = (lastFrameSize / 1024).toFixed(1);
+            document.getElementById('kpi-overlay').innerHTML =
+                `FPS: ${fps}<br>Ping: ${currentPing}ms<br>Frame: ${frameSizeKo} Ko<br>Bitrate: ${bitrate} Kbps`;
+            frameCount = 0;
+            totalBytes = 0;
+            lastKpiUpdate = now;
+        }, 1000);
+
+        // Ping toutes les secondes
+        setInterval(() => {
+            if (window.dataChannel?.readyState === "open")
+                window.dataChannel.send("PING:" + performance.now());
+        }, 1000);
     };
-    
+
     dc.onmessage = (e) => {
-        if (typeof e.data !== 'string') {
-            const bytes = new Uint8Array(e.data);
-            drawPixels(bytes);
+        if (typeof e.data === 'string') {
+            if (e.data.startsWith('PONG:'))
+                currentPing = Math.round(performance.now() - parseFloat(e.data.substring(5)));
+            return;
         }
+        if (decoding || !(e.data instanceof ArrayBuffer)) return;
+        decoding = true;
+        frameCount++;
+        lastFrameSize = e.data.byteLength;
+        totalBytes += e.data.byteLength;
+        const blob = new Blob([e.data], { type: 'image/jpeg' });
+        createImageBitmap(blob).then(bitmap => {
+            const canvas = document.getElementById('renderCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+            decoding = false;
+        }).catch(() => { decoding = false; });
     };
 }
 
@@ -83,19 +125,4 @@ function setupMouseInteraction() {
             }
         }
     };
-}
-
-function drawPixels(data) {
-    const canvas = document.getElementById('renderCanvas');
-    const ctx = canvas.getContext('2d');
-    // Doit matcher RENDER_WIDTH / RENDER_HEIGHT du backend
-    const imageData = ctx.createImageData(384, 216);
-    
-    for (let i = 0, j = 0; i < data.length; i += 3, j += 4) {
-        imageData.data[j] = data[i];     // R
-        imageData.data[j+1] = data[i+1]; // G
-        imageData.data[j+2] = data[i+2]; // B
-        imageData.data[j+3] = 255;       // Alpha
-    }
-    ctx.putImageData(imageData, 0, 0);
 }

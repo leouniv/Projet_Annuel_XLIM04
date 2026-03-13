@@ -14,18 +14,18 @@ using json = nlohmann::json;
 using namespace std::chrono_literals;
 
 // --- CONFIGURATION ---
-// Taille de rendu (doit matcher la taille du canvas cote frontend)
-// 384x216 ~ 16:9, meilleure qualite tout en restant raisonnable en taille de frame brute
-const int RENDER_WIDTH = 384;
-const int RENDER_HEIGHT = 216;
+// Taille de rendu = taille d'affichage (1:1, zero etirement)
+const int RENDER_WIDTH = 1280;
+const int RENDER_HEIGHT = 720;
 const int SERVER_PORT = 8000;
+const int TARGET_FPS = 60;
+const int JPEG_QUALITY = 80;
 
 // Variables Globales
 std::shared_ptr<rtc::PeerConnection> pc;
 std::shared_ptr<rtc::DataChannel> dc;
 Renderer myRenderer;
 float currentAngle = 0.0f;
-std::atomic<bool> renderRequested(false);
 
 int main() {
     rtc::InitLogger(rtc::LogLevel::Warning); // On affiche moins de logs système
@@ -37,6 +37,7 @@ int main() {
     // 2. Configuration Reseau
     rtc::Configuration config;
     config.iceServers.emplace_back("stun:stun.l.google.com:19302");
+    config.maxMessageSize = 1024 * 1024; // 1 Mo max par message
 
     rtc::WebSocketServer::Configuration wsConfig;
     wsConfig.port = SERVER_PORT;
@@ -44,10 +45,10 @@ int main() {
 
     std::cout << "[Systeme] En attente de client sur le port " << SERVER_PORT << "..." << std::endl;
 
-    wsServer.onClient([](std::shared_ptr<rtc::WebSocket> ws) {
+    wsServer.onClient([config](std::shared_ptr<rtc::WebSocket> ws) {
         std::cout << "[Client] Nouvelle connexion detectee." << std::endl;
 
-        pc = std::make_shared<rtc::PeerConnection>(rtc::Configuration{});
+        pc = std::make_shared<rtc::PeerConnection>(config);
 
         pc->onDataChannel([](std::shared_ptr<rtc::DataChannel> incomingDc) {
             dc = incomingDc;
@@ -55,17 +56,18 @@ int main() {
                 std::cout << "[Client] Canal de donnees ouvert. Pret." << std::endl;
             });
 
-            // GESTION INPUT SOURIS
+            // GESTION INPUT SOURIS + PING
             dc->onMessage([](std::variant<rtc::binary, rtc::string> data) {
                 if (std::holds_alternative<rtc::string>(data)) {
                     std::string msg = std::get<rtc::string>(data);
                     
-                    // Format attendu : "MOUSE:x"
-                    if (msg.rfind("MOUSE:", 0) == 0) {
+                    if (msg.rfind("PING:", 0) == 0) {
+                        if (dc && dc->isOpen()) dc->send("PONG:" + msg.substr(5));
+                    }
+                    else if (msg.rfind("MOUSE:", 0) == 0) {
                         try {
                             float deltaX = std::stof(msg.substr(6));
-                            currentAngle += deltaX * 0.02f; // Sensibilité rotation
-                            renderRequested = true;
+                            currentAngle += deltaX * 0.02f;
                         } catch (...) {}
                     }
                 }
@@ -94,29 +96,31 @@ int main() {
         });
     });
 
-    // 3. BOUCLE PRINCIPALE (Game Loop)
+    // 3. BOUCLE PRINCIPALE (Game Loop a 60 FPS)
+    const auto frameDuration = std::chrono::microseconds(1000000 / TARGET_FPS);
+    auto lastFrame = std::chrono::steady_clock::now();
+
     while (!glfwWindowShouldClose(myRenderer.getWindow())) {
-        
-        // Maintient l'application vivante même si fenêtre invisible
         glfwPollEvents();
 
-        if (renderRequested) {
-            renderRequested = false;
+        auto now = std::chrono::steady_clock::now();
+        if (now - lastFrame >= frameDuration) {
+            lastFrame = now;
 
             // A. Rendu & Capture
             myRenderer.render(currentAngle);
-            auto pixels = myRenderer.getPixels();
-            
-            // B. Swap Buffer (Techniquement optionnel si invisible, mais bonne pratique)
-            glfwSwapBuffers(myRenderer.getWindow());
 
-            // C. Envoi Réseau (pixels bruts RGB)
+            // B. Encodage JPEG & Envoi (AVANT swap, le back buffer est encore valide)
             if (dc && dc->isOpen()) {
-                auto dataPtr = reinterpret_cast<const std::byte*>(pixels.data());
-                dc->send(rtc::binary(dataPtr, dataPtr + pixels.size()));
+                auto jpegData = myRenderer.getJpegData(JPEG_QUALITY);
+                auto dataPtr = reinterpret_cast<const std::byte*>(jpegData.data());
+                dc->send(rtc::binary(dataPtr, dataPtr + jpegData.size()));
             }
+
+            // C. Swap Buffer
+            glfwSwapBuffers(myRenderer.getWindow());
         }
-        std::this_thread::sleep_for(5ms);
+        std::this_thread::sleep_for(1ms);
     }
     return 0;
 }
