@@ -137,6 +137,3 @@ The frontend is a static web application. No special installation is required be
 
 Contributions are welcome! Please refer to the project's issue tracker for open tasks or submit pull requests for improvements.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). (Create a `LICENSE` file if not present.)
