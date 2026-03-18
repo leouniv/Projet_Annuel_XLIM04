@@ -7,7 +7,7 @@
       "inheritEnvironments": [ "msvc_x64_x64" ],
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
-      "cmakeToolchain": "$env{VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake",
+        "cmakeToolchain": "${projectDir}\\..\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake",
       "variables": [
         {
           "name": "VCPKG_TARGET_TRIPLET",
