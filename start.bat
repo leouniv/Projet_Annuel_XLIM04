@@ -1,65 +1,48 @@
 @echo off
-setlocal enabledelayedexpansion
-chcp 65001 >nul 2>&1
+chcp 65001 >nul
 
-rem =============================================
-rem  start.bat - Lancement one-click du projet
-rem =============================================
+echo =============================================
+echo    LANCEMENT FINAL - CLOUD GAMING 3D
+echo =============================================
 
-rem Racine du depot = dossier de ce script
+:: --- 1. DEFINITION DES CHEMINS (SANS ESPACES) ---
 set REPO_ROOT=%~dp0
 if "%REPO_ROOT:~-1%"=="\" set REPO_ROOT=%REPO_ROOT:~0,-1%
-
 set SERVER_EXE=%REPO_ROOT%\backend\out\build\x64-Debug\MonServeur.exe
 
+:: --- 2. NETTOYAGE ---
+echo [1/3] Nettoyage des anciens processus...
+taskkill /f /im MonServeur.exe >nul 2>&1
+taskkill /f /im python.exe >nul 2>&1
+
+:: --- 3. VERIFICATION DE L'EXECUTABLE ---
+if exist "%SERVER_EXE%" goto :LANCE_BACKEND
+
 echo.
-echo =============================================
-echo   Cloud Gaming 3D - Demarrage
-echo =============================================
+echo [ERREUR] Le moteur MonServeur.exe est absent.
+echo Chemin cherche : %SERVER_EXE%
+pause
+exit /b
+
+:LANCE_BACKEND
+echo [2/3] Lancement du Moteur (Backend)...
+start "Moteur_3D" "%SERVER_EXE%"
+
+:LANCE_FRONTEND
+echo [3/3] Lancement du Web (Frontend)...
+:: On lance le serveur Python directement dans le bon dossier
+start "Serveur_Web" /D "%REPO_ROOT%\frontend" python -m http.server 3000
+
+:OUVERTURE
 echo.
-
-rem --- 1. Verifier Python ---
-where python >nul 2>&1
-if errorlevel 1 (
-    echo [Erreur] Python n'est pas installe ou pas dans le PATH.
-    echo          Telechargez-le sur https://www.python.org/downloads/
-    pause
-    exit /b 1
-)
-
-rem --- 2. Compiler si necessaire ---
-if not exist "%SERVER_EXE%" (
-    echo [Build] MonServeur.exe introuvable. Lancement de la preparation...
-    echo.
-    powershell -ExecutionPolicy Bypass -NoProfile -File "%REPO_ROOT%\bootstrap_vcpkg.ps1"
-    if not exist "%SERVER_EXE%" (
-        echo.
-        echo [Erreur] La compilation a echoue. Consultez les messages ci-dessus.
-        pause
-        exit /b 1
-    )
-    echo.
-)
-
-rem --- 3. Lancer le serveur backend ---
-echo [OK] Lancement du serveur backend (MonServeur.exe)...
-start "MonServeur" "%SERVER_EXE%"
-
-rem --- 4. Lancer le serveur frontend ---
-echo [OK] Lancement du serveur frontend (port 3000)...
-start "FrontendServer" python -m http.server 3000 --directory "%REPO_ROOT%\frontend"
-
-rem --- 5. Ouvrir le navigateur ---
-echo [OK] Ouverture du navigateur dans 2 secondes...
-timeout /t 2 /nobreak >nul
+echo [OK] Tout est lance. Attente de 3 secondes...
+timeout /t 3 /nobreak >nul
 start http://localhost:3000
 
 echo.
 echo =============================================
-echo   Tout est lance !
-echo   - Backend  : localhost:8000 (WebSocket)
-echo   - Frontend : localhost:3000 (Navigateur)
+echo    PROJET EN LIGNE !
 echo =============================================
 echo.
-echo Pour arreter : lancez stop.bat ou fermez cette fenetre.
+echo Fermez les fenetres noires pour arreter.
 pause
